@@ -11,20 +11,22 @@ try {
    /* $connectionInfo = array("UID" => "proyearqui@arquitectura", "pwd" => "Guerron123", "Database" => "gps", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:arquitectura.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
-
-*/
-$connectionInfo = array("UID" => "sergio@88servidor", "pwd" => "Guerra19", "Database" => "88", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-$serverName = "tcp:88servidor.database.windows.net,1433";
-$conn = sqlsrv_connect($serverName, $connectionInfo);
-	$sql="INSERT INTO ubicacion(latitud,longitud) values (-12.156209,-77.085418);";
+	$datos=$_POST['chipid'];
+	$datos1=$_POST['temperatura'];
+	$sql="INSERT INTO prueba(id,contenido) values ('$datos','$datos1');";
 	$resultado=sqlsrv_query($conn,$sql);
-	
+	*/
+	$longi=$_POST['longitud'];
+	$lati=$_POST['latitud'];
+	echo "La longitud es: ".$longi;
+	echo "La latitud es: ".$lati;
 	echo "Datos recogidos correctamente";	
 }
 catch (Exception $e) {
     print("Error connecting to SQL Server.");
     die(print_r($e));
 }
+
 ?>
 	
 </body>

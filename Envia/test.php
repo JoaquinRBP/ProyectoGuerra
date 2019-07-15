@@ -13,9 +13,8 @@ try {
     $connectionInfo = array("UID" => "proyearqui@arquitectura", "pwd" => "Guerron123", "Database" => "gps", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:arquitectura.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
-	$datos=$_POST['chipid'];
-	$datos1=$_POST['temperatura'];
-	$sql="INSERT INTO prueba(id,contenido) values ('$datos','$datos1');";
+	
+	$sql="INSERT INTO prueba(id,contenido) values ('$longi','$lati');";
 	$resultado=sqlsrv_query($conn,$sql);
 	
 	echo "La longitud es: ".$longi;

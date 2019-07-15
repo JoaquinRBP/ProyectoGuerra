@@ -11,7 +11,7 @@ try {
     $connectionInfo = array("UID" => "proyearqui@arquitectura", "pwd" => "Guerron123", "Database" => "gps", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:arquitectura.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
-	$sql="INSERT INTO prueba(id,contenido) values ('DATOSS','SQLSRV')";
+	$sql="INSERT INTO prueba(id,contenido) values ('DATOSS','SQLSRV');";
 	$resultado=sqlsrv_query($conn,$sql);
 	
 	echo "Datos recogidos correctamente";	

@@ -11,8 +11,8 @@ try {
     $connectionInfo = array("UID" => "proyearqui@arquitectura", "pwd" => "Guerron123", "Database" => "gps", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:arquitectura.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
-	$datos="Holasdsef".$_POST['chipid'];
-	$datos1="Azure".$_POST['temperatura'];
+	$datos="Holasdsef".$_GET['chipid'];
+	$datos1="Azure".$_GET['temperatura'];
 	$sql="INSERT INTO prueba(id,contenido) values ('$datos','$datos1');";
 	$resultado=sqlsrv_query($conn,$sql);
 	

@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Incluir</title>
-</head>
-<body>
+
 	<?php
 // PHP Data Objects(PDO) Sample Code:
 try {
@@ -27,6 +21,3 @@ catch (Exception $e) {
 }
 
 ?>
-	
-</body>
-</html>

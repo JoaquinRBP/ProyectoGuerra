@@ -1,8 +1,8 @@
 <?php
-if(!empty($_GET['latitud']) && !empty($_GET['longitud'])){
+if(!empty($_POST['latitud']) && !empty($_POST['longitud'])){
 	try{
-	$latitud = $_GET ['latitud'];
-	$longitud = $_GET ['longitud'];
+	$latitud = $_POST['latitud'];
+	$longitud = $_POST['longitud'];
 	/*$conexion= new PDO("mysql:host=localhost;dbname={basededatos}}","root","");
 	$conexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	$resultado = $conexion->exec("INSERT INTO prueba (latitud,longitud) VALUES ('$latitud','$longitud');");

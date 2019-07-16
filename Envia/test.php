@@ -8,8 +8,8 @@
 	<?php
 // PHP Data Objects(PDO) Sample Code:
 try {
-	$longi="".$_POST['longitud'];
-	$lati="".$_POST['latitud'];
+	$longi="Hola".$_POST['longitud'];
+	$lati="Hola1".$_POST['latitud'];
     $connectionInfo = array("UID" => "proyearqui@arquitectura", "pwd" => "Guerron123", "Database" => "gps", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:arquitectura.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
